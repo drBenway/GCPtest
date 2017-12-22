@@ -1,7 +1,8 @@
-let expect = require('chai').expect;
-let app = require('../../server');
-describe('<server>',function(){
-  it('should pass',function(){
+const expect = require('chai').expect;
+const app = require('../../server');
+
+describe('<server>', () => {
+  it('should pass', () => {
     expect(true).to.equal(true);
   });
 
