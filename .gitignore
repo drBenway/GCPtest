@@ -1,0 +1,10 @@
+bower_components
+node_modules
+coverage
+.idea
+.vscode
+*.iml
+*.iws
+.DS_Store
+npm-debug.log
+test/e2e/output

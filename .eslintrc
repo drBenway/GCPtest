@@ -1,0 +1,32 @@
+{
+    "extends": "airbnb-base",
+    "plugins": [
+        "html"
+    ],
+    "globals": {
+        "Polymer": false,
+        "ING": false,
+        "SOASTA": false,
+        "BOOMR": false,
+        "_": false,
+        "suite": false,
+        "test": false,
+        "fixture": false,
+        "assert": false,
+        "setup": false,
+        "document": false,
+        "window": false
+    },
+    "rules": {
+        "no-underscore-dangle": 0,
+        // because this is a polymer thing
+        "func-names": 0,
+        //allow annonymous functions,
+        "comma-dangle" : 0
+        // never have a , add the end if it's not needed
+    },
+    "settings": {
+        "html/indent": "+2"
+        // indentation is the <script> indentation plus two spaces.
+    }
+}
