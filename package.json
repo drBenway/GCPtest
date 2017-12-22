@@ -1,6 +1,6 @@
 {
   "name": "docker_web_app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.js on Docker",
   "author": "First Last <first.last@example.com>",
   "main": "server.js",
@@ -12,11 +12,10 @@
     "lint:fix": "eslint --fix *.js",
     "docerize": "docker build -t 'buildtest'$npm_package_version .",
     "build": "npm run test && npm run 'lint:fix' && npm run lint",
-    "build:patch" : "npm run build && npm version patch -m 'Bumped to %s' && npm run gitpush",
-    "build:minor" : "npm run build && npm version minor -m 'Bumped to %s'  && npm run gitpush",
-    "build:major" : "npm run build && npm version major -m 'Bumped to %s'  && npm run gitpush",
-    "gitpush"        : "git push --tags origin HEAD:master"
-
+    "build:patch": "npm run build && npm version patch -m 'Bumped to %s' && npm run gitpush",
+    "build:minor": "npm run build && npm version minor -m 'Bumped to %s'  && npm run gitpush",
+    "build:major": "npm run build && npm version major -m 'Bumped to %s'  && npm run gitpush",
+    "gitpush": "git push --tags origin HEAD:master"
   },
   "dependencies": {
     "express": "^4.16.2"
