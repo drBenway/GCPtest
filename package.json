@@ -15,7 +15,8 @@
     "build:patch": "npm run build && npm version patch -m 'Bumped to %s' && npm run gitpush",
     "build:minor": "npm run build && npm version minor -m 'Bumped to %s'  && npm run gitpush",
     "build:major": "npm run build && npm version major -m 'Bumped to %s'  && npm run gitpush",
-    "gitpush": "git push --tags origin HEAD:master"
+    "gitpush": "git push --tags origin HEAD:master",
+    "snyk" : "run snyk test"
   },
   "dependencies": {
     "express": "^4.16.2"
@@ -27,7 +28,9 @@
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-html": "^1.6.0",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^4.0.1",
-    "sinon": "^4.1.3"
+    "mocha": "^3.5.0",
+    "sinon": "^4.0.0",
+    "sinon-chai": "^2.14.0",
+    "snyk": "^1.62.2"
   }
 }
