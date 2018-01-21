@@ -39,10 +39,11 @@ pipeline {
         }
         stage('dockerize') {
             steps {
-                // read package.json
-                def props = readJSON file: 'package.json'
-                echo props['version']
-
+              script{
+                  // read package.json
+                  def props = readJSON file: 'package.json'
+                  echo props['version']
+              }
             }
         }
     }
