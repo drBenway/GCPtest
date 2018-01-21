@@ -18,8 +18,8 @@ pipeline {
             steps{
                 checkout scm
                  // read package.json
-                def package = readJSON file: 'package.json'
-                echo package['version']
+                def props = readJSON file: 'package.json'
+                echo props['version']
             }
         }
         stage('install') {
