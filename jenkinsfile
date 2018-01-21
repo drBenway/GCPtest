@@ -7,10 +7,14 @@ pipeline {
     // use local docker file
     agent { dockerfile true }
 
+    // read package.json
+    def package = readJSON file: 'package.json'
+
     stages {
         stage('git'){
             steps{
                 checkout scm
+                echo package['version']
             }
         }
         stage('install') {
