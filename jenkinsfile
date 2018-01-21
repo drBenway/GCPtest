@@ -1,5 +1,9 @@
 pipeline {
 
+    // this file requires you to install the following plugins for jenkins:
+    // - nodejs
+    // - docker [https://jenkins.io/doc/book/pipeline/docker/]
+    // - pipeline utils [https://jenkins.io/doc/pipeline/steps/pipeline-utility-steps/#code-readjson-code-read-json-from-files-in-the-workspace]
 
     // this tool will be used for all stages/steps except over-written
     tools {nodejs "nodejs 9.3.0"}
