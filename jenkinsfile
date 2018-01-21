@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    // this tool will be used for all stages/steps except over-written
+    tools {nodejs "nodejs 9.3.0"}
+
+    stages {
+        stage('git'){
+            steps{
+                checkout scm
+            }
+        }
+        stage('install') {
+            steps {
+                tool name: 'nodejs 9.3.0'
+                sh 'npm install'
+            }
+        }
+        stage('lint') {
+            steps {
+                tool name: 'nodejs 9.3.0'
+                sh 'npm run lint'
+            }
+        }
+        stage('test') {
+            steps {
+                tool name: 'nodejs 9.3.0'
+                sh 'npm test'
+            }
+        }
+        stage('dockerize') {
+            steps {
+                tool name: 'nodejs 9.3.0'
+                sh 'npm run dockerize'
+            }
+        }
+    }
+}
