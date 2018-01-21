@@ -1,8 +1,11 @@
 pipeline {
-    agent any
+
 
     // this tool will be used for all stages/steps except over-written
     tools {nodejs "nodejs 9.3.0"}
+
+    // use local docker file
+    agent { dockerfile true }
 
     stages {
         stage('git'){
