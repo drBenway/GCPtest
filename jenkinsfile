@@ -17,9 +17,6 @@ pipeline {
         stage('git'){
             steps{
                 checkout scm
-                 // read package.json
-                def props = readJSON file: 'package.json'
-                echo props['version']
             }
         }
         stage('install') {
@@ -42,7 +39,9 @@ pipeline {
         }
         stage('dockerize') {
             steps {
-                tool name: 'nodejs 9.3.0'
+                // read package.json
+                def props = readJSON file: 'package.json'
+                echo props['version']
 
             }
         }
