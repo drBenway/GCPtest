@@ -10,6 +10,7 @@ pipeline {
 
     // use local docker file
     //agent { dockerfile true }
+    agent {any}
 
 
 
