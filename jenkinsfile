@@ -9,7 +9,7 @@ pipeline {
     tools {nodejs "nodejs 9.3.0"}
 
     // use local docker file
-    agent { dockerfile true }
+    //agent { dockerfile true }
 
 
 
